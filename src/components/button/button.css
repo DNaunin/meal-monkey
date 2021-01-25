@@ -6,3 +6,31 @@
   border: none;
   padding: 10px 20px;
 }
+
+.btnfilled {
+  border-radius: 20px;
+  font-size: 16pt;
+  color: white;
+  background: #fc6011;
+  border: none;
+  padding: 10px 20px;
+}
+
+.btnbord {
+  border-radius: 20px;
+  font-size: 16pt;
+  color: #fc6011;
+  background: white;
+  border: solid 1px #fc6011;
+  padding: 10px 20px;
+}
+
+.btnfb {
+  border-radius: 20px;
+  background: #367fc0;
+  font-size: 12pt;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: sans-serif;
+}
