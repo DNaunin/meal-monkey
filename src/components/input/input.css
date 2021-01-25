@@ -1,0 +1,28 @@
+.login {
+  border-radius: 20px;
+  font-size: 12pt;
+  color: white;
+  background: #fc6011;
+  border: none;
+  padding: 20px 80px;
+}
+
+.inputmail {
+  border-radius: 20px;
+  font-size: 14pt;
+  background: #f2f2f2;
+  border: none;
+  padding: 20px 20px;
+}
+
+.inputpw {
+  border-radius: 20px;
+  font-size: 14pt;
+  background: #f2f2f2;
+  border: none;
+  padding: 20px 20px;
+}
+
+::placeholder {
+  color: #b6b7b7;
+}
