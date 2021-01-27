@@ -1,0 +1,19 @@
+.card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.card {
+  width: 117px;
+  height: 117px;
+}
+
+.card-text {
+  font-size: 14pt;
+  text-align: center;
+  color: #4a4b4d;
+  font-family: sans-serif;
+  font-weight: bold;
+}
