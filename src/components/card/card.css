@@ -1,13 +1,8 @@
 .card-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 25px;
-}
-
-.card {
   width: 117px;
   height: 117px;
+  object-fit: cover;
+  border-radius: 25px;
 }
 
 .card-text {
@@ -16,4 +11,11 @@
   color: #4a4b4d;
   font-family: sans-serif;
   font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-gap: 1rem 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 20px;
 }
