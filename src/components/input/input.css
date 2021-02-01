@@ -1,8 +1,8 @@
 .login {
   border-radius: 20px;
   font-size: 12pt;
-  color: white;
-  background: #fc6011;
+  color: var(--secondaryfont-color);
+  background: var(--main-color);
   border: none;
   padding: 20px 80px;
 }
@@ -10,7 +10,7 @@
 .inputmail {
   border-radius: 20px;
   font-size: 14pt;
-  background: #f2f2f2;
+  background: var(--secondarybg-color);
   border: none;
   padding: 20px 20px;
 }
@@ -18,11 +18,11 @@
 .inputpw {
   border-radius: 20px;
   font-size: 14pt;
-  background: #f2f2f2;
+  background: var(--secondarybg-color);
   border: none;
   padding: 20px 20px;
 }
 
 ::placeholder {
-  color: #b6b7b7;
+  color: var(--placeholder-color);
 }

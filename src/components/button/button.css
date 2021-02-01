@@ -1,17 +1,8 @@
-.btn {
-  border-radius: 20px;
-  font-size: 1.2rem;
-  color: white;
-  background: #016b6b;
-  border: none;
-  padding: 10px 20px;
-}
-
 .btnfilled {
   border-radius: 20px;
   font-size: 16pt;
-  color: white;
-  background: #fc6011;
+  color: var(--secondaryfont-color);
+  background: var(--main-color);
   border: none;
   padding: 10px 20px;
 }
@@ -19,17 +10,17 @@
 .btnbord {
   border-radius: 20px;
   font-size: 16pt;
-  color: #fc6011;
-  background: white;
-  border: solid 1px #fc6011;
+  color: var(--main-color);
+  background: var(--secondaryfont-color);
+  border: solid 1px var(--main-color);
   padding: 10px 20px;
 }
 
 .btnfb {
   border-radius: 20px;
-  background: #367fc0;
+  background: var(--fb-color);
   font-size: 12pt;
-  color: white;
+  color: var(--secondaryfont-color);
   border: none;
   padding: 10px 20px;
   font-family: sans-serif;
