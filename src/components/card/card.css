@@ -8,7 +8,7 @@
 .card-text {
   font-size: 14pt;
   text-align: center;
-  color: #4a4b4d;
+  color: var(--primaryfont-color);
   font-family: sans-serif;
   font-weight: bold;
 }
