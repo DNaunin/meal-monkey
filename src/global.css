@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
+@font-face {
+  font-family: metropolis;
+  src: url("http://db.onlinewebfonts.com/t/c02d97eb2b2899bdb0d87b182a64333d.woff2");
+  src: url("http://db.onlinewebfonts.com/t/c02d97eb2b2899bdb0d87b182a64333d.woff");
+  src: url("http://db.onlinewebfonts.com/t/c02d97eb2b2899bdb0d87b182a64333d.ttf");
+}
+
 *,
 *::after,
 *::before {
@@ -20,8 +27,8 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
   margin: 0;
+  font-family: metropolis, sans-serif;
 }
 
 input,
