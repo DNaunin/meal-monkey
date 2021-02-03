@@ -1,20 +1,33 @@
+import { createElement } from "../../utils/createElement";
+
 export function createVerifyForm() {
   const form = document.createElement("form");
   form.className = "verifyform";
 
-  function createPWinput() {
-    const pwinput = document.createElement("input");
-    pwinput.setAttribute("type", "text");
-    pwinput.placeholder = ("placeholder", "*");
-    pwinput.className = "inputcode";
+  function createPWinputElement() {
+    const input = createElement("input", {
+      className: "inputcode",
+      placeholder: "*",
+      type: "password",
+      children: [inputa, inputb, inputc, inputd],
+    });
 
-    return pwinput;
+    return input;
   }
 
-  const inputa = createPWinput();
-  const inputb = createPWinput();
-  const inputc = createPWinput();
-  const inputd = createPWinput();
+  // function createPWinput() {
+  //   const pwinput = document.createElement("input");
+  //   pwinput.setAttribute("type", "text");
+  //   pwinput.placeholder = ("placeholder", "*");
+  //   pwinput.className = "inputcode";
+
+  //   return pwinput;
+  // }
+
+  const inputa = createPWinputElement();
+  const inputb = createPWinputElement();
+  const inputc = createPWinputElement();
+  const inputd = createPWinputElement();
 
   const otpContainer = document.createElement("div");
   otpContainer.append(inputa, inputb, inputc, inputd);
