@@ -1,0 +1,31 @@
+.form {
+  display: grid;
+  row-gap: 1em;
+
+  text-align: center;
+}
+
+.form input {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 16pt;
+}
+
+.verifyform {
+  text-align: center;
+}
+
+.inputcode {
+  max-width: 64px;
+  border-radius: 20px;
+  font-size: 14pt;
+  background: var(--secondarybg-color);
+  border: none;
+  padding: 20px 20px;
+  margin: 10px;
+}
+
+.click {
+  color: var(--main-color);
+  font-weight: 700;
+}
