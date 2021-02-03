@@ -2,6 +2,23 @@ export function createVerifyForm() {
   const form = document.createElement("form");
   form.className = "verifyform";
 
+  function createPWinput() {
+    const pwinput = document.createElement("input");
+    pwinput.setAttribute("type", "text");
+    pwinput.placeholder = ("placeholder", "*");
+    pwinput.className = "inputcode";
+
+    return pwinput;
+  }
+
+  const inputa = createPWinput();
+  const inputb = createPWinput();
+  const inputc = createPWinput();
+  const inputd = createPWinput();
+
+  const otpContainer = document.createElement("div");
+  otpContainer.append(inputa, inputb, inputc, inputd);
+
   const button = document.createElement("button");
   button.innerText = "Next";
   button.className = "btnfilled";
@@ -28,30 +45,7 @@ export function createVerifyForm() {
 
   subtext.append(clickhere);
 
-  const input1 = document.createElement("input");
-  input1.setAttribute("type", "text");
-  input1.placeholder = ("placeholder", "*");
-  input1.className = "inputcode";
-
-  const input2 = document.createElement("input");
-  input2.setAttribute("type", "text");
-  input2.placeholder = ("placeholder", "*");
-  input2.className = "inputcode";
-
-  const input3 = document.createElement("input");
-  input3.setAttribute("type", "text");
-  input3.placeholder = ("placeholder", "*");
-  input3.className = "inputcode";
-
-  const input4 = document.createElement("input");
-  input4.setAttribute("type", "text");
-  input4.placeholder = ("placeholder", "*");
-  input4.className = "inputcode";
-
-  const inputContainer = document.createElement("div");
-  inputContainer.append(input1, input2, input3, input4);
-
-  form.append(title, text, inputContainer, button, subtext, clickhere);
+  form.append(title, text, otpContainer, button, subtext, clickhere);
 
   return form;
 }
