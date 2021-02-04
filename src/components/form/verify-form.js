@@ -1,66 +1,68 @@
 import { createElement } from "../../utils/createElement";
 
+function createInputElement() {
+  return createElement("input", {
+    className: "inputcode",
+    placeholder: "*",
+    type: "number",
+    // maxLength; 1,
+    min: 0,
+    max: 9,
+  });
+}
+
 export function createVerifyForm() {
-  const form = document.createElement("form");
-  form.className = "verifyform";
+  const inputElement1 = createInputElement();
+  const inputElement2 = createInputElement();
+  const inputElement3 = createInputElement();
+  const inputElement4 = createInputElement();
 
-  function createPWinputElement() {
-    const input = createElement("input", {
-      className: "inputcode",
-      placeholder: "*",
-      type: "password",
-      maxLength: 1,
-      children: [inputa, inputb, inputc, inputd],
-    });
-
-    return input;
-  }
-
-  const inputa = createPWinputElement();
-  const inputb = createPWinputElement();
-  const inputc = createPWinputElement();
-  const inputd = createPWinputElement();
-
-  const otpContainer = document.createElement("div");
-  otpContainer.append(inputa, inputb, inputc, inputd);
-
-  const button = document.createElement("button");
-  button.innerText = "Next";
-  button.className = "btnfilled";
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const secretPassword = "1111";
-    if (
-      `${inputa.value}${inputb.value}${inputc.value}${inputd.value}` ===
-      secretPassword
-    ) {
-      alert(
-        `Your super secret password - ${inputa.value}${inputb.value}${inputc.value}${inputd.value}- is correct`
-      );
-    } else {
-      alert(`Yout password is incorrect !`);
-    }
+  const messageElement = createElement("p", {
+    className: "message",
   });
 
-  const title = document.createElement("h2");
-  title.innerText = "We have sent an OTP to your Mobile";
+  return createElement("form", {
+    className: "form",
+    children: [
+      createElement("h2", { innerText: "We have sent an OTP to your Mobile" }),
+      createElement("p", {
+        innerText: "Please check your mobile number to reset your password",
+      }),
+      messageElement,
+      createElement("div", {
+        children: [inputElement1, inputElement2, inputElement3, inputElement4],
+      }),
+      createElement("input", {
+        type: "submit",
+        value: "Next",
+        className: "btnfilled",
+      }),
+      createElement("p", {
+        innerText: "Didnt Receive?",
 
-  const text = document.createElement("p");
-  text.innerText =
-    "Please check your mobile number 0171*****12 continue to reset your password";
+        children: [
+          createElement("a", {
+            innerText: "Click here",
+            className: "click",
+            href: "#",
+          }),
+        ],
+      }),
+    ],
 
-  const subtext = document.createElement("p");
-  subtext.innerText = "Didn't receive?";
+    onsubmit: function (event) {
+      event.preventDefault();
+      const password =
+        inputElement1.value +
+        inputElement2.value +
+        inputElement3.value +
+        inputElement4.value;
 
-  const clickhere = document.createElement("a");
-  clickhere.innerText = "Click here";
-  clickhere.className = "click";
-  clickhere.href = "#";
-
-  subtext.append(clickhere);
-
-  form.append(title, text, otpContainer, button, subtext, clickhere);
-
-  return form;
+      if (password === "3217") {
+        messageElement.innerText = "Correct Password";
+      } else {
+        messageElement.innerText = "Wrong Password!";
+      }
+    },
+  });
 }
