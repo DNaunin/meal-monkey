@@ -9,20 +9,12 @@ export function createVerifyForm() {
       className: "inputcode",
       placeholder: "*",
       type: "password",
+      maxLength: 1,
       children: [inputa, inputb, inputc, inputd],
     });
 
     return input;
   }
-
-  // function createPWinput() {
-  //   const pwinput = document.createElement("input");
-  //   pwinput.setAttribute("type", "text");
-  //   pwinput.placeholder = ("placeholder", "*");
-  //   pwinput.className = "inputcode";
-
-  //   return pwinput;
-  // }
 
   const inputa = createPWinputElement();
   const inputb = createPWinputElement();
@@ -35,11 +27,21 @@ export function createVerifyForm() {
   const button = document.createElement("button");
   button.innerText = "Next";
   button.className = "btnfilled";
-  function register() {
-    alert("password resetted");
-  }
 
-  button.addEventListener("click", register);
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const secretPassword = "1111";
+    if (
+      `${inputa.value}${inputb.value}${inputc.value}${inputd.value}` ===
+      secretPassword
+    ) {
+      alert(
+        `Your super secret password - ${inputa.value}${inputb.value}${inputc.value}${inputd.value}- is correct`
+      );
+    } else {
+      alert(`Yout password is incorrect !`);
+    }
+  });
 
   const title = document.createElement("h2");
   title.innerText = "We have sent an OTP to your Mobile";
